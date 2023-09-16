@@ -3,9 +3,25 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import { Button } from "@/components/Elements/Button";
+import { Pane } from "tweakpane";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [title, setTitle] = useState("hello");
+
+  const PARAMS = {
+    factor: 123,
+    title: title,
+    color: "#ff0055",
+  };
+
+  const pane = new Pane();
+
+  pane.addBinding(PARAMS, "factor");
+  pane.addBinding(PARAMS, "title").on("change", (ev) => {
+    setTitle(ev.value);
+  });
+  pane.addBinding(PARAMS, "color");
 
   return (
     <>
@@ -18,6 +34,7 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <p>{title}</p>
       <div className="card">
         <Button onClick={() => setCount((count) => count + 1)}>
           count is {count}
