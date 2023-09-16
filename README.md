@@ -1,6 +1,6 @@
 # tweakpane-demo
 
-Webアプリを実装するための技術を色々試す。
+Webアプリを実装するための技術、ライブラリ、テクニックを色々試す。
 
 - https://github.com/alan2207/bulletproof-react
 - https://github.com/streamich/react-use
