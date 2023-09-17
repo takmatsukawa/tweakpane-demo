@@ -6,6 +6,7 @@ Webアプリを実装するための技術、ライブラリ、テクニック�
     - https://github.com/alan2207/bulletproof-react
     - https://github.com/streamich/react-use
     - https://cocopon.github.io/tweakpane/
+    - https://ui.shadcn.com/
 - Backend
     - Go lang
     - https://github.com/connectrpc/connect-go

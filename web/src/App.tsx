@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { Pane } from "tweakpane";
 import { useSharedCounter } from "@/providers/App";
-import { Button } from "./components/Elements/Button";
+import { Button } from "./components/ui/button";
 import { createPromiseClient } from "@connectrpc/connect";
 import { createConnectTransport } from "@connectrpc/connect-web";
 
