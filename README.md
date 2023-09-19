@@ -9,8 +9,10 @@ Webアプリを実装するための技術、ライブラリ、テクニック�
     - https://ui.shadcn.com/
 - Backend
     - Go lang
+    - https://github.com/golang-standards/project-layout
     - https://github.com/connectrpc/connect-go
     - https://bun.uptrace.dev/
+    - https://github.com/go-bun/bun-realworld-app
     - https://github.com/mackee/go-sqlla
     - https://github.com/mackee/go-genddl
     - https://github.com/k0kubun/sqldef
