@@ -17,6 +17,8 @@ import (
 	"github.com/uptrace/bun/dialect/pgdialect"
 	"github.com/uptrace/bun/driver/pgdriver"
 
+	"time"
+
 	"github.com/takmatsukawa/tweakpane-demo/todo"
 )
 
@@ -32,6 +34,21 @@ func (s *GreetServer) Greet(
 	})
 	res.Header().Set("Greet-Version", "v1")
 	return res, nil
+}
+
+func (s *GreetServer) GreetServerStream(
+	ctx context.Context,
+	req *connect.Request[greetv1.GreetRequest],
+	stream *connect.ServerStream[greetv1.GreetResponse],
+) error {
+	for i := 0; ; i++ {
+		if err := stream.Send(&greetv1.GreetResponse{
+			Greeting: fmt.Sprintf("[%d] Hello, %s!", i, req.Msg.Name),
+		}); err != nil {
+			return err
+		}
+		time.Sleep(time.Second * 1)
+	}
 }
 
 func main() {
