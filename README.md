@@ -10,6 +10,8 @@ Webアプリを実装するための技術、ライブラリ、テクニック�
 - Backend
     - Go lang
     - https://go.dev/doc/modules/layout
+    - https://github.com/connectrpc/examples-go
+    - https://buf.build/docs/configuration/v1/buf-work-yaml
     - https://github.com/golang-standards/project-layout
     - https://github.com/connectrpc/connect-go
     - https://bun.uptrace.dev/
