@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { GreetRequest, GreetResponse } from "./greet_pb.js";
+import { GreetRequest, GreetResponse, GreetServerStreamRequest, GreetServerStreamResponse } from "./greet_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -26,8 +26,8 @@ export const GreetService = {
      */
     greetServerStream: {
       name: "GreetServerStream",
-      I: GreetRequest,
-      O: GreetResponse,
+      I: GreetServerStreamRequest,
+      O: GreetServerStreamResponse,
       kind: MethodKind.ServerStreaming,
     },
   }

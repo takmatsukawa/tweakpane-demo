@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package greet.v1;
+
+option go_package = "github.com/takmatsukawa/tweakpane-demo/internal/gen/greet/v1;greetv1";
+
+message GreetRequest {
+  string name = 1;
+}
+
+message GreetServerStreamRequest {
+  string name = 1;
+}
+
+message GreetResponse {
+  string greeting = 1;
+}
+
+message GreetServerStreamResponse {
+  string greeting = 1;
+}
+
+service GreetService {
+  rpc Greet(GreetRequest) returns (GreetResponse) {}
+  rpc GreetServerStream(GreetServerStreamRequest) returns (stream GreetServerStreamResponse) {}
+}
