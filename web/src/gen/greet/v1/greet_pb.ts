@@ -44,43 +44,6 @@ export class GreetRequest extends Message<GreetRequest> {
 }
 
 /**
- * @generated from message greet.v1.GreetServerStreamRequest
- */
-export class GreetServerStreamRequest extends Message<GreetServerStreamRequest> {
-  /**
-   * @generated from field: string name = 1;
-   */
-  name = "";
-
-  constructor(data?: PartialMessage<GreetServerStreamRequest>) {
-    super();
-    proto3.util.initPartial(data, this);
-  }
-
-  static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "greet.v1.GreetServerStreamRequest";
-  static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-  ]);
-
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GreetServerStreamRequest {
-    return new GreetServerStreamRequest().fromBinary(bytes, options);
-  }
-
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GreetServerStreamRequest {
-    return new GreetServerStreamRequest().fromJson(jsonValue, options);
-  }
-
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GreetServerStreamRequest {
-    return new GreetServerStreamRequest().fromJsonString(jsonString, options);
-  }
-
-  static equals(a: GreetServerStreamRequest | PlainMessage<GreetServerStreamRequest> | undefined, b: GreetServerStreamRequest | PlainMessage<GreetServerStreamRequest> | undefined): boolean {
-    return proto3.util.equals(GreetServerStreamRequest, a, b);
-  }
-}
-
-/**
  * @generated from message greet.v1.GreetResponse
  */
 export class GreetResponse extends Message<GreetResponse> {
@@ -114,6 +77,43 @@ export class GreetResponse extends Message<GreetResponse> {
 
   static equals(a: GreetResponse | PlainMessage<GreetResponse> | undefined, b: GreetResponse | PlainMessage<GreetResponse> | undefined): boolean {
     return proto3.util.equals(GreetResponse, a, b);
+  }
+}
+
+/**
+ * @generated from message greet.v1.GreetServerStreamRequest
+ */
+export class GreetServerStreamRequest extends Message<GreetServerStreamRequest> {
+  /**
+   * @generated from field: string name = 1;
+   */
+  name = "";
+
+  constructor(data?: PartialMessage<GreetServerStreamRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "greet.v1.GreetServerStreamRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GreetServerStreamRequest {
+    return new GreetServerStreamRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GreetServerStreamRequest {
+    return new GreetServerStreamRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GreetServerStreamRequest {
+    return new GreetServerStreamRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: GreetServerStreamRequest | PlainMessage<GreetServerStreamRequest> | undefined, b: GreetServerStreamRequest | PlainMessage<GreetServerStreamRequest> | undefined): boolean {
+    return proto3.util.equals(GreetServerStreamRequest, a, b);
   }
 }
 

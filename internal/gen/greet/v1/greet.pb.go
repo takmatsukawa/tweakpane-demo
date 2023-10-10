@@ -67,53 +67,6 @@ func (x *GreetRequest) GetName() string {
 	return ""
 }
 
-type GreetServerStreamRequest struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
-}
-
-func (x *GreetServerStreamRequest) Reset() {
-	*x = GreetServerStreamRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_greet_v1_greet_proto_msgTypes[1]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *GreetServerStreamRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*GreetServerStreamRequest) ProtoMessage() {}
-
-func (x *GreetServerStreamRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_greet_v1_greet_proto_msgTypes[1]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use GreetServerStreamRequest.ProtoReflect.Descriptor instead.
-func (*GreetServerStreamRequest) Descriptor() ([]byte, []int) {
-	return file_greet_v1_greet_proto_rawDescGZIP(), []int{1}
-}
-
-func (x *GreetServerStreamRequest) GetName() string {
-	if x != nil {
-		return x.Name
-	}
-	return ""
-}
-
 type GreetResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -125,7 +78,7 @@ type GreetResponse struct {
 func (x *GreetResponse) Reset() {
 	*x = GreetResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_greet_v1_greet_proto_msgTypes[2]
+		mi := &file_greet_v1_greet_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -138,7 +91,7 @@ func (x *GreetResponse) String() string {
 func (*GreetResponse) ProtoMessage() {}
 
 func (x *GreetResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_greet_v1_greet_proto_msgTypes[2]
+	mi := &file_greet_v1_greet_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -151,12 +104,59 @@ func (x *GreetResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GreetResponse.ProtoReflect.Descriptor instead.
 func (*GreetResponse) Descriptor() ([]byte, []int) {
-	return file_greet_v1_greet_proto_rawDescGZIP(), []int{2}
+	return file_greet_v1_greet_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *GreetResponse) GetGreeting() string {
 	if x != nil {
 		return x.Greeting
+	}
+	return ""
+}
+
+type GreetServerStreamRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+}
+
+func (x *GreetServerStreamRequest) Reset() {
+	*x = GreetServerStreamRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_greet_v1_greet_proto_msgTypes[2]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GreetServerStreamRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GreetServerStreamRequest) ProtoMessage() {}
+
+func (x *GreetServerStreamRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_greet_v1_greet_proto_msgTypes[2]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GreetServerStreamRequest.ProtoReflect.Descriptor instead.
+func (*GreetServerStreamRequest) Descriptor() ([]byte, []int) {
+	return file_greet_v1_greet_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *GreetServerStreamRequest) GetName() string {
+	if x != nil {
+		return x.Name
 	}
 	return ""
 }
@@ -215,13 +215,13 @@ var file_greet_v1_greet_proto_rawDesc = []byte{
 	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x08, 0x67, 0x72, 0x65, 0x65, 0x74, 0x2e, 0x76, 0x31,
 	0x22, 0x22, 0x0a, 0x0c, 0x47, 0x72, 0x65, 0x65, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
 	0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04,
-	0x6e, 0x61, 0x6d, 0x65, 0x22, 0x2e, 0x0a, 0x18, 0x47, 0x72, 0x65, 0x65, 0x74, 0x53, 0x65, 0x72,
-	0x76, 0x65, 0x72, 0x53, 0x74, 0x72, 0x65, 0x61, 0x6d, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
-	0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04,
 	0x6e, 0x61, 0x6d, 0x65, 0x22, 0x2b, 0x0a, 0x0d, 0x47, 0x72, 0x65, 0x65, 0x74, 0x52, 0x65, 0x73,
 	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x1a, 0x0a, 0x08, 0x67, 0x72, 0x65, 0x65, 0x74, 0x69, 0x6e,
 	0x67, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x67, 0x72, 0x65, 0x65, 0x74, 0x69, 0x6e,
-	0x67, 0x22, 0x37, 0x0a, 0x19, 0x47, 0x72, 0x65, 0x65, 0x74, 0x53, 0x65, 0x72, 0x76, 0x65, 0x72,
+	0x67, 0x22, 0x2e, 0x0a, 0x18, 0x47, 0x72, 0x65, 0x65, 0x74, 0x53, 0x65, 0x72, 0x76, 0x65, 0x72,
+	0x53, 0x74, 0x72, 0x65, 0x61, 0x6d, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x12, 0x0a,
+	0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d,
+	0x65, 0x22, 0x37, 0x0a, 0x19, 0x47, 0x72, 0x65, 0x65, 0x74, 0x53, 0x65, 0x72, 0x76, 0x65, 0x72,
 	0x53, 0x74, 0x72, 0x65, 0x61, 0x6d, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x1a,
 	0x0a, 0x08, 0x67, 0x72, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09,
 	0x52, 0x08, 0x67, 0x72, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x32, 0xac, 0x01, 0x0a, 0x0c, 0x47,
@@ -258,14 +258,14 @@ func file_greet_v1_greet_proto_rawDescGZIP() []byte {
 var file_greet_v1_greet_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_greet_v1_greet_proto_goTypes = []interface{}{
 	(*GreetRequest)(nil),              // 0: greet.v1.GreetRequest
-	(*GreetServerStreamRequest)(nil),  // 1: greet.v1.GreetServerStreamRequest
-	(*GreetResponse)(nil),             // 2: greet.v1.GreetResponse
+	(*GreetResponse)(nil),             // 1: greet.v1.GreetResponse
+	(*GreetServerStreamRequest)(nil),  // 2: greet.v1.GreetServerStreamRequest
 	(*GreetServerStreamResponse)(nil), // 3: greet.v1.GreetServerStreamResponse
 }
 var file_greet_v1_greet_proto_depIdxs = []int32{
 	0, // 0: greet.v1.GreetService.Greet:input_type -> greet.v1.GreetRequest
-	1, // 1: greet.v1.GreetService.GreetServerStream:input_type -> greet.v1.GreetServerStreamRequest
-	2, // 2: greet.v1.GreetService.Greet:output_type -> greet.v1.GreetResponse
+	2, // 1: greet.v1.GreetService.GreetServerStream:input_type -> greet.v1.GreetServerStreamRequest
+	1, // 2: greet.v1.GreetService.Greet:output_type -> greet.v1.GreetResponse
 	3, // 3: greet.v1.GreetService.GreetServerStream:output_type -> greet.v1.GreetServerStreamResponse
 	2, // [2:4] is the sub-list for method output_type
 	0, // [0:2] is the sub-list for method input_type
@@ -293,7 +293,7 @@ func file_greet_v1_greet_proto_init() {
 			}
 		}
 		file_greet_v1_greet_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GreetServerStreamRequest); i {
+			switch v := v.(*GreetResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -305,7 +305,7 @@ func file_greet_v1_greet_proto_init() {
 			}
 		}
 		file_greet_v1_greet_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GreetResponse); i {
+			switch v := v.(*GreetServerStreamRequest); i {
 			case 0:
 				return &v.state
 			case 1:

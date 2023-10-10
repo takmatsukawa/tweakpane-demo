@@ -8,12 +8,12 @@ message GreetRequest {
   string name = 1;
 }
 
-message GreetServerStreamRequest {
-  string name = 1;
-}
-
 message GreetResponse {
   string greeting = 1;
+}
+
+message GreetServerStreamRequest {
+  string name = 1;
 }
 
 message GreetServerStreamResponse {
