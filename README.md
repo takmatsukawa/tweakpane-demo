@@ -14,6 +14,7 @@ Webアプリを実装するための技術、ライブラリ、テクニック�
     - https://buf.build/docs/configuration/v1/buf-work-yaml
     - https://github.com/golang-standards/project-layout
     - https://github.com/connectrpc/connect-go
+    - https://zenn.dev/hsaki/books/golang-grpc-starting/viewer/stream
     - https://bun.uptrace.dev/
     - https://github.com/go-bun/bun-realworld-app
     - https://github.com/mackee/go-sqlla
